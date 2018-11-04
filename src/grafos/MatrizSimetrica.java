@@ -24,7 +24,6 @@ public class MatrizSimetrica {
 		boolean aux;
 		if(f==c)
 			throw new MatrizSimetricaException("Filas y Columnas iguales"+ f + c );
-		aux=vec[this.getIndex(f,c)];
 		return vec[this.getIndex(f,c)] ;
 		
 	}

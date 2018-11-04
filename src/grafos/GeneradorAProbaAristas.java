@@ -5,8 +5,7 @@ public class GeneradorAProbaAristas extends Generador {
 
 	public GeneradorAProbaAristas(int n,double d) throws Exception {
 		super(n);
-		int i;
-		int j;
+		int i,j;
 		for (i=0; i < n; i++) {
 			for (j = 0; j < i; j++) {
 				if(Math.random()<d)

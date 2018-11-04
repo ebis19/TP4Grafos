@@ -26,10 +26,10 @@ public abstract class Generador {
 		return c;
 	}
 
-	public int contarAristas(int n) throws Exception {
+	public int contarAristas(int x) throws Exception {
 		int c = 0;
 		for (int i = 0; i < n; i++) {
-			if (m.get(n, i)) {
+			if (i!=x && m.get(x, i)) {
 				c++;
 			}	
 		}
