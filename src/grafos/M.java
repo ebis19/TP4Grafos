@@ -1,4 +1,4 @@
-package pack;
+package grafos;
 
 public class M {
 

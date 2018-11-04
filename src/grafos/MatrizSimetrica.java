@@ -1,4 +1,4 @@
-package pack;
+package grafos;
 
 
 
@@ -11,7 +11,7 @@ public class MatrizSimetrica {
 		int t=n*(n-1)/2;
 		vec = new boolean[t];
 	}
-	//I = F * N + C – ( F 2 + 3 * F + 2) / 2
+	//I = F * N + C ï¿½ ( F 2 + 3 * F + 2) / 2
 	private int  getIndex(int f, int c) {
 		if(f>c){
 			 int aux = f;

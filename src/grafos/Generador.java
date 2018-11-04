@@ -1,4 +1,4 @@
-package pack;
+package grafos;
 
 import java.io.File;
 import java.io.FileNotFoundException;
