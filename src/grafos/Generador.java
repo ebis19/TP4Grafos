@@ -21,7 +21,7 @@ public abstract class Generador {
 	public int contarAristasTotal() throws Exception {
 		int c = 0;
 		for (int i = 0; i < this.n; i++) {
-			c = contarAristas(i);
+			c += contarAristas(i);
 		}
 		return c;
 	}
@@ -66,17 +66,17 @@ public abstract class Generador {
 		
 		return (this.n*(this.n-1))/2;
 	}
-	public int getAd() throws Exception {
+	public double getAd() throws Exception {
 		
-		return (int) contarAristasTotal()/AristaMax();
+		return  ((double)contarAristasTotal()/(double)AristaMax());
 	}
 	
 	public void generarArchivo() throws Exception{
 		PrintWriter arch = new PrintWriter(new File("grafo.in"));
 		arch.print(this.n);
-		arch.print("%"+getAd());
-		arch.print(buscarGradoMaximo());
-		arch.print(buscarGradoMinimo());
+		arch.print(" %"+getAd()*100);
+		arch.print(" "+buscarGradoMaximo());
+		arch.println(" "+buscarGradoMinimo());
 		for (int i = 0; i < n; i++) {
 			for (int j = 0; j < i; j++) {
 				if(m.get(i, j))
