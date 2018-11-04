@@ -14,7 +14,6 @@ public class GeneradorAPorcentajeAdj extends Generador {
 				c=  (int) ((Math.random() * super.n)) ;
 			}
 			super.m.set(f, c, true);
-			System.out.println(f+""+c);
 		}
 	}
 
