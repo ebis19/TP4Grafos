@@ -6,7 +6,7 @@ import java.io.PrintWriter;
 
 public abstract class Generador {
 
-	private int n;// cant nodos
+	protected int n;// cant nodos
 	private int grado;
 	private int gradomaximo;
 	private int gradominimo;
@@ -49,10 +49,10 @@ public abstract class Generador {
 	}
 	
 	public int buscarGradoMinimo() throws Exception {
-		int c = contarAristas(0), minimo=0; 
+		int c, minimo=contarAristas(0); 
 		for (int i = 1; i < this.n; i++) {
 			c = contarAristas(i);
-			if(minimo>c){
+			if(minimo<c){
 				minimo=c;
 			}
 		}
